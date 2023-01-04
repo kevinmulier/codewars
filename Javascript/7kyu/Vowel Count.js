@@ -6,7 +6,7 @@
 
 // The input string will only consist of lower case letters and/or spaces.
 
-//  ---------------------------------------------------
+//  --------------------------------------------------
 
 // My solution
 
