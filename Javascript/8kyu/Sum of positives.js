@@ -16,3 +16,7 @@ function positiveSum(arr) {
   });
   return result;
 }
+
+// One liner
+
+const positiveSum = (arr) => arr.filter((numb) => numb > 0).reduce((a, b) => a + b, 0);
