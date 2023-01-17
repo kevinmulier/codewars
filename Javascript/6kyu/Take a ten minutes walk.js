@@ -29,11 +29,7 @@ function isValidWalk(walk) {
           break;
       }
     }
-    if (nCounter === sCounter && wCounter === eCounter) {
-      return true;
-    } else {
-      return false;
-    }
+    return nCounter === sCounter && wCounter === eCounter;
   } else {
     return false;
   }
