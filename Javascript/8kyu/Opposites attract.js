@@ -6,4 +6,4 @@
 
 // Solution
 
-const lovefunc = (flower1, flower2) => (flower1 % 2 === 0 ? (flower2 % 2 !== 0 ? true : false) : flower2 % 2 === 0 ? true : false);
+const lovefunc = (flower1, flower2) => flower1 % 2 !== flower2 % 2;
