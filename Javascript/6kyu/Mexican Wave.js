@@ -15,15 +15,10 @@
 // Solution
 
 function wave(str) {
-  if (str.length === 0) {
-    return [];
-  }
   let waveArray = [];
   for (let i = 0; i < str.length; i++) {
     let current = str.split("");
-    if (current[i] === " " && i === str.length - 1) {
-      return waveArray;
-    } else if (current[i] !== " ") {
+    if (current[i] !== " ") {
       current[i] = str[i].toUpperCase();
       waveArray.push(current.join(""));
     }
