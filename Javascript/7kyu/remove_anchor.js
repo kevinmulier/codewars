@@ -7,3 +7,7 @@
 // Solution
 
 const removeUrlAnchor = (url) => (url.split("").indexOf("#") !== -1 ? url.split("").slice(0, url.indexOf("#")).join("") : url);
+
+// Better solution
+
+const removeUrlAnchor = (url) => url.split("#")[0];
