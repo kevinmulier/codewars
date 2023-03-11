@@ -3,3 +3,7 @@
 // You can assume all values in the array are numbers.
 
 const smallEnough = (a, limit) => a.filter((el) => el > limit).length === 0;
+
+// Another solution
+
+const smallEn = (a, limit) => a.every((el) => el <= limit);
