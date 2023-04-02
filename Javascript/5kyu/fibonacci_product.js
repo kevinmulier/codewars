@@ -1,13 +1,12 @@
 function productFib(prod) {
-  let fn = 0;
-  let fn1 = 1;
-  let tempfn = 1;
+  let fn = 0,
+    fn1 = 1;
   while (fn * fn1 < prod) {
+    let tempfn = fn;
     fn = fn1;
     fn1 += tempfn;
-    tempfn = fn;
   }
-  return fn * fn1 > prod ? [fn, fn1, false] : [fn, fn1, true];
+  return [fn, fn1, fn * fn1 === prod];
 }
 
 // The Fibonacci numbers are the numbers in the following integer sequence (Fn):
