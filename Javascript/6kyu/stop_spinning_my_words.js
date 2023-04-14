@@ -6,11 +6,10 @@
 // spinWords( "This is a test") => returns "This is a test"
 // spinWords( "This is another test" )=> returns "This is rehtona test"
 function spinWords(string) {
-  let stringArr = string.split(" ");
-  stringArr = stringArr
+  return string
+    .split(" ")
     .map((word) => {
       return word.length > 4 ? word.split("").reverse().join("") : word;
     })
     .join(" ");
-  return stringArr;
 }
