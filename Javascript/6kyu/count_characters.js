@@ -16,7 +16,6 @@ function count(string) {
 
 // Shorter solution :
 function count(string) {
-  let uniqueCharacters = [...new Set(string.split(""))];
   let charactersCount = {};
   for (let character of string.split("")) {
     charactersCount[character] ? (charactersCount[character] += 1) : (charactersCount[character] = 1);
