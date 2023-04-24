@@ -12,7 +12,6 @@ function mix(s1, s2) {
       s1Uniques[character] = 1;
     }
   }
-  console.log(s1Uniques);
 
   for (let character of s2
     .replaceAll(/[^a-z]/g, "")
@@ -24,7 +23,6 @@ function mix(s1, s2) {
       s2Uniques[character] = 1;
     }
   }
-  console.log(s2Uniques);
 
   let uniquesSup1 = [];
 
@@ -62,6 +60,7 @@ function mix(s1, s2) {
       sortedCharacters.push(`2:${character.repeat(s2Uniques[character])}`);
     }
   }
+
   return sortedCharacters
     .sort()
     .sort((a, b) => b.length - a.length)
