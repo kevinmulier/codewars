@@ -6,4 +6,4 @@
 // 14: -14
 // -34: 34
 
-const opposite = (number) => (number >= 0 ? -number : Math.abs(number));
+const opposite = (number) => -number;
