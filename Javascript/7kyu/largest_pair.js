@@ -7,13 +7,8 @@
 // Input sequence contains minimum two elements and every element is an integer.
 
 function largestPairSum(numbers) {
-  let bestPairResult = numbers[0] + numbers[1];
-  for (let i = 0; i < numbers.length; i++) {
-    for (let j = i; j < numbers.length; j++) {
-      if (i != j && numbers[i] + numbers[j] > bestPairResult) {
-        bestPairResult = numbers[i] + numbers[j];
-      }
-    }
-  }
-  return bestPairResult;
+  numbers.sort(function (a, b) {
+    return b - a;
+  });
+  return numbers[0] + numbers[1];
 }
