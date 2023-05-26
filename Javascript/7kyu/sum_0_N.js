@@ -22,25 +22,24 @@
 
 // 0=0
 
-var SequenceSum = (function() {
+var SequenceSum = (function () {
   function SequenceSum() {}
 
-  SequenceSum.showSequence = function(count) {
+  SequenceSum.showSequence = function (count) {
     let result = "";
+    let realResult = 0;
     if (count < 0) {
-      return `${count}<0`
-    }
-    else if (count == 0) {
-      return `0=0`
-    }
-    else {
-    for (let i = 0 ; i < count ; i++) {
-        result += `${i}+`
-    }
-    return result+count=;
+      return `${count}<0`;
+    } else if (count == 0) {
+      return `0=0`;
+    } else {
+      for (let i = 0; i < count; i++) {
+        result += `${i}+`;
+        realResult += i;
       }
+      return `${result}${count} = ${realResult + count}`;
+    }
   };
 
   return SequenceSum;
-
 })();
