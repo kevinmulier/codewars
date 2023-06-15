@@ -19,15 +19,4 @@
 //   return array;
 // }
 
-const flattenAndSort = (array) => {
-  let flattenedArray = [];
-  for (let arr of array) {
-    flattenedArray.push(arr.join("").split(""));
-  }
-  console.log(flattenedArray);
-  return flattenedArray
-    .map((el) => Number(el))
-    .sort((a, b) => a - b)
-    .join("")
-    .split("");
-};
+const flattenAndSort = (array) => array.flat().sort((a, b) => a - b);
