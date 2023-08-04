@@ -13,11 +13,6 @@
 
 // Some random tests might fail due to a bug in the JavaScript implementation. Simply resubmit if that happens to you.
 
-function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
-  let total = 0;
-  let agesArr = [age1, age2, age3, age4, age5, age6, age7, age8];
-  for (let age of agesArr) {
-    total += age ** 2;
-  }
-  return Math.floor(Math.sqrt(total) / 2);
+function predictAge(...ages) {
+  return Math.floor(Math.sqrt(ages.reduce((acc, c) => c ** 2 + acc, 0)) / 2);
 }
