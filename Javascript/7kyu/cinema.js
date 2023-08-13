@@ -21,13 +21,11 @@
 
 function movie(card, ticket, perc) {
   let cardPrice = card;
-  let ticketPrice = 0;
   let times = 0;
 
-  while (Math.ceil(cardPrice) >= ticketPrice) {
+  while (Math.ceil(cardPrice) >= ticket * times) {
     times++;
     cardPrice = cardPrice + ticket * perc ** times;
-    ticketPrice += ticket;
   }
 
   return times;
