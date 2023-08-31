@@ -8,9 +8,9 @@
 // ghost = new Ghost();
 // ghost.color //=> "white" or "yellow" or "purple" or "red"
 
-var Ghost = function () {
-  var possibleColors = ["white", "yellow", "purple", "red"];
-  var randomIndex = Math.floor(Math.random() * possibleColors.length);
+const Ghost = function () {
+  const possibleColors = ["white", "yellow", "purple", "red"];
+  const randomIndex = Math.floor(Math.random() * possibleColors.length);
 
   this.color = possibleColors[randomIndex];
 };
