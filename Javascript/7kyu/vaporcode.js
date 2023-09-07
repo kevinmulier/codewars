@@ -1,10 +1,4 @@
-const vaporcode = (string) =>
-  string
-    .split(" ")
-    .join("")
-    .split("")
-    .map((el) => el.toUpperCase())
-    .join("  ");
+const vaporcode = (string) => string.toUpperCase().split(" ").join("").split("").join("  ");
 
 //     ASC Week 1 Challenge 4 (Medium #1)
 
