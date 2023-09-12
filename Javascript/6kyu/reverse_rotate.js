@@ -37,14 +37,14 @@ function revrot(str, sz) {
   let finalArr = [];
 
   for (let el of splittedString) {
-    let currentArr = [...el.split("")];
+    let currentArr = [...el];
 
     if (currentArr.reduce((acc, c) => acc + c ** 3, 0) % 2 === 0) {
-      finalArr.push(currentArr.reverse());
+      finalArr.push(currentArr.reverse().join(""));
     } else {
-      finalArr.push(currentArr.slice(1) + currentArr[0]);
+      finalArr.push(currentArr.slice(1).join("") + currentArr[0]);
     }
   }
 
-  return finalArr.join("").split(",").join("");
+  return finalArr.join("");
 }
