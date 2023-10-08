@@ -5,13 +5,33 @@
 // "identifier"   =>  "identifier"
 // ""             =>  ""
 
-function solution(string) {
-  let arr = [];
-  for (let el of string.split("")) {
-    if (el.charCodeAt(0) > 64 && el.charCodeAt(0) < 91) {
-      arr.push(" ");
-    }
-    arr.push(el);
+function upArray(arr) {
+  if (arr.length === 0) {
+    return null;
   }
-  return arr.join("");
+  for (let num of arr) {
+    if (num < 0 || num > 9) {
+      return null;
+    }
+  }
+
+  let carry = 1;
+  let result = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    let sum = arr[i] + carry;
+    if (sum >= 10) {
+      carry = 1;
+      result.unshift(sum % 10);
+    } else {
+      carry = 0;
+      result.unshift(sum);
+    }
+  }
+
+  if (carry === 1) {
+    result.unshift(1);
+  }
+
+  return result;
 }
