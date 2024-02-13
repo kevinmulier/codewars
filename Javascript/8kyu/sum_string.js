@@ -13,4 +13,4 @@
 
 // Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
 
-const sumStr = (a, b) => (Number(a) + Number(b)).toString();
+const sumStr = (a, b) => `${+a + +b}`;
