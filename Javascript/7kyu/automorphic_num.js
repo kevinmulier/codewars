@@ -9,13 +9,5 @@
 // Notes
 // The number passed to the function is positive
 
-const automorphic = (n) => {
-  const stringNum = n.toString();
-  const stringSquaredNum = (n ** 2).toString();
-
-  return stringSquaredNum.substring(
-    stringSquaredNum.length - stringNum.length,
-  ) === stringNum
-    ? 'Automorphic'
-    : 'Not!!';
-};
+const automorphic = (n) =>
+  String(n * n).endsWith(String(n)) ? 'Automorphic' : 'Not!!';
