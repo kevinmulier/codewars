@@ -4,7 +4,6 @@ class Shark extends Animal {
   }
 }
 
-// II. Cat class
 class Cat extends Animal {
   constructor(name, age, status) {
     super(name, age, 4, 'cat', status);
